@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: webhook-receiver
   namespace: flux-system
+  annotations:
+    traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   rules:
     - host: flux-webhook.ctnr.cloud
