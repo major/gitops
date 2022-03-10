@@ -18,6 +18,9 @@ spec:
   values:
     deployment:
       replicas: 1
+    ingressRoute:
+      dashboard:
+        enabled: false
     logs:
       # access:
       #   enabled: true
