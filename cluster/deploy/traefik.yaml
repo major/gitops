@@ -9,7 +9,7 @@ spec:
   path: ./apps/traefik
   prune: true
   dependsOn:
-    - name: cert-manager
+    - name: cert-manager-config
   sourceRef:
     kind: GitRepository
     name: flux-system

@@ -8,8 +8,6 @@ spec:
   interval: 10m0s
   path: ./apps/whoami
   prune: true
-  dependsOn:
-    - name: traefik
   sourceRef:
     kind: GitRepository
     name: flux-system
