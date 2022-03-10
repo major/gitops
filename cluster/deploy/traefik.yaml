@@ -8,6 +8,8 @@ spec:
   interval: 10m0s
   path: ./apps/traefik
   prune: true
+  dependsOn:
+    - name: cert-manager
   sourceRef:
     kind: GitRepository
     name: flux-system
