@@ -9,9 +9,9 @@ spec:
   routes:
     - match: Host(`traefik.ctnr.cloud`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
       kind: Rule
-      middlewares:
-        - name: dashboard-ingress-auth
-          namespace: traefik
+      # middlewares:
+      #   - name: dashboard-ingress-auth
+      #     namespace: traefik
       services:
         - name: api@internal
           kind: TraefikService
