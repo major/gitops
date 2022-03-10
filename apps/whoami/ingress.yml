@@ -16,5 +16,5 @@ spec:
                   number: 80
             path: /
             pathType: Prefix
-  # tls:
-  # - secretName: ctnr-cloud-wildcard-staging
+  tls:
+    - secretName: ctnr-cloud-wildcard-staging
