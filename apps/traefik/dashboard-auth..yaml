@@ -1,0 +1,9 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: dashboard-auth
+  namespace: traefik
+spec:
+  basicAuth:
+    secret: dashboard-auth-secret
+    removeHeader: true
