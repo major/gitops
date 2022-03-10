@@ -7,10 +7,11 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`traefik.ctnr.cloud`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+    - match: Host(`traefik.ctnr.cloud`)
       kind: Rule
       middlewares:
         - name: dashboard-ingress-auth
+          namespace: traefik
       services:
         - name: api@internal
           kind: TraefikService
