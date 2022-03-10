@@ -16,16 +16,11 @@ spec:
         namespace: flux-system
   # https://github.com/traefik/traefik-helm-chart/blob/master/traefik/values.yaml
   values:
-    deployment:
-      replicas: 1
-    ingressRoute:
-      dashboard:
-        enabled: false
     logs:
       # access:
       #   enabled: true
       general:
         level: DEBUG
-    # ports:
-    #   web:
-    #     redirectTo: websecure
+    ports:
+      web:
+        redirectTo: websecure
