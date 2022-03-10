@@ -4,6 +4,8 @@ kind: Ingress
 metadata:
   name: whoami
   namespace: whoami
+  annotations:
+    traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   rules:
     - host: whoami.ctnr.cloud
