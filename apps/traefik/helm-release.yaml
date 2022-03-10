@@ -22,7 +22,7 @@ spec:
       # access:
       #   enabled: true
       general:
-        level: INFO
+        level: DEBUG
     metrics: null
     ports:
       web:
