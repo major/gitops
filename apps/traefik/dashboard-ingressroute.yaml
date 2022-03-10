@@ -11,7 +11,7 @@ spec:
       kind: Rule
       middlewares:
         - name: dashboard-auth
-          namespace: default
+          namespace: traefik
       services:
         - name: api@internal
           kind: TraefikService
