@@ -17,4 +17,6 @@ spec:
             path: /
             pathType: Prefix
   tls:
-    - secretName: traefik/ctnr-cloud-wildcard-staging
+    - hosts:
+        - whoami.ctnr.cloud
+      secretName: whoami-cert
