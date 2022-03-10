@@ -26,8 +26,8 @@ spec:
       #   enabled: true
       general:
         level: DEBUG
-    ports:
-      web:
-        redirectTo: websecure
+    # ports:
+    #   web:
+    #     redirectTo: websecure
     additionalArguments:
       - "--api.insecure=true"
