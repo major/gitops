@@ -19,11 +19,11 @@ spec:
     deployment:
       replicas: 2
     logs:
-      access:
-        enabled: true
+      # access:
+      #   enabled: true
       general:
         level: INFO
     metrics: null
-    ports:
-      web:
-        redirectTo: websecure
+    # ports:
+    #   web:
+    #     redirectTo: websecure
