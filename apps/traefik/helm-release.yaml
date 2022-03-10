@@ -30,4 +30,4 @@ spec:
       web:
         redirectTo: websecure
     additionalArguments:
-      - "api.insecure=true"
+      - "--api.insecure=true"
