@@ -1,0 +1,28 @@
+apiVersion: v1
+data:
+    token: ENC[AES256_GCM,data:noIX3s0gi6itHjwwPBICQa4mAMwNswlYQILd747kKCtY5SuqZb1BLQc/lDyt2AZUnzU2QV7rwFA=,iv:SNxVma4RuDBfJbFEEQRHssLbvfktF6MSi6xhybCch4U=,tag:z0veJ+gtigPpBewUOw1gDQ==,type:str]
+kind: Secret
+metadata:
+    name: webhook-token
+    namespace: flux-system
+type: Opaque
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1w8dts3ptgqsqac60z8v2asney6akyktad43k5reguj5suj6y83rstgyh8v
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBhL3I2UXZIMjZvM09NS2cz
+            aWRFQnJla2hCK05pNDVObTZ4dGJxbDB0TW53CmJWSzZ6U3dnUzN1VnUzR3ZuTHor
+            ZGdsZHNndmlLWmxQWmtIRWNnOUI2SDQKLS0tIGFwa05lS21VTXdZNzFTRTZFZ2Jn
+            L1A3V0ZIUitNTnV6S01UK3lwRTVKK0kK4oBE6aatH0ZmDWNl0ovm2sfvvVq8pCCB
+            JggpakqGt/K5MTXkX04B86Q4lv5KdKW/ifykhFmsut6RT08GC2RVng==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-03-09T22:07:10Z"
+    mac: ENC[AES256_GCM,data:dlZj2nBM8L05pc/o4mSs7uMlunj4RAODjvYnk0ZToshkgPFKBvZ1QMwMel6rnClWXU5iaARhOaPc1Kq0X5Fw2LUUJGR9OayzB4HMYxJbztkDuc2NM7RR5a4N3bj/Eo6ylM4xJwiTxgjUzUSROfjvMtUoQfOL17SSNX4b3+6rkDk=,iv:8JbRsha1Zl0BjtBJmNRKSC2suCFDb2Usdh5hBVMS/p4=,tag:6Jzk8i5rPIp3IRRo5t0sqQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.1
