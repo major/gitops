@@ -4,9 +4,8 @@ metadata:
   name: traefik-dashboard
   namespace: traefik
 spec:
-  # entryPoints:
-  #   - web
-  #   - websecure
+  entryPoints:
+    - websecure
   routes:
     - match: Host(`traefik.ctnr.cloud`)
       kind: Rule
