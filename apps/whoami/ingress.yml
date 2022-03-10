@@ -16,7 +16,3 @@ spec:
                   number: 80
             path: /
             pathType: Prefix
-  tls:
-    - hosts:
-        - whoami.ctnr.cloud
-      secretName: whoami-cert
