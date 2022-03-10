@@ -9,7 +9,6 @@ spec:
       kind: Rule
       middlewares:
         - name: dashboard-ingress-auth
-          namespace: traefik
       services:
         - name: api@internal
           kind: TraefikService
