@@ -16,3 +16,6 @@ spec:
       services:
         - name: api@internal
           kind: TraefikService
+  tls:
+    domains:
+      - main: traefik.ctnr.cloud
