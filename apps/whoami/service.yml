@@ -4,6 +4,7 @@ metadata:
   labels:
     app: whoami
   name: whoami
+  namespace: whoami
 spec:
   ports:
     - port: 80
