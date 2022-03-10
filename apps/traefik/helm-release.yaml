@@ -1,0 +1,29 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: traefik
+spec:
+  interval: 5m
+  timeout: 20m
+  chart:
+    spec:
+      chart: traefik
+      sourceRef:
+        kind: HelmRepository
+        name: traefik-charts
+        namespace: flux-system
+  # https://github.com/traefik/traefik-helm-chart/blob/master/traefik/values.yaml
+  values:
+    deployment:
+      replicas: 2
+    logs:
+      access:
+        enabled: true
+      general:
+        level: INFO
+    metrics: null
+    ports:
+      web:
+        redirectTo: websecure
