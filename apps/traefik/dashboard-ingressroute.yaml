@@ -17,5 +17,4 @@ spec:
         - name: api@internal
           kind: TraefikService
   tls:
-    domains:
-      - main: traefik.ctnr.cloud
+    secretName: ctnr-cloud-wildcard-prod
