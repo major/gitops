@@ -17,4 +17,4 @@ spec:
             path: /
             pathType: Prefix
   tls:
-    - secretName: ctnr-cloud-wildcard-staging
+    - secretName: traefik/ctnr-cloud-wildcard-staging
