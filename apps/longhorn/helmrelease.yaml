@@ -13,7 +13,7 @@ spec:
         name: longhorn
   interval: 1m0s
   releaseName: longhorn
-  targetNamespace: longhorn
+  targetnamespace: longhorn-system
   # https://github.com/longhorn/charts/blob/master/charts/longhorn/values.yaml
   values:
     persistence:
