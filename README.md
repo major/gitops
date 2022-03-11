@@ -1,4 +1,4 @@
-# Major's Kubernetes Gitops
+# Major's Gitops Repo of Stuff
 
 Because everything belongs in a container, right? 🤔
 
