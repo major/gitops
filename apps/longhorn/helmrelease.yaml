@@ -1,0 +1,20 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: longhorn
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: longhorn
+      sourceRef:
+        kind: HelmRepository
+        name: longhorn
+  interval: 1m0s
+  releaseName: longhorn
+  targetNamespace: longhorn
+  # https://github.com/longhorn/charts/blob/master/charts/longhorn/values.yaml
+  values:
+    persistence:
+      defaultClassReplicaCount: 2
