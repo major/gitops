@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: thetagang-notifications
+  namespace: thetagang
+spec:
+  selector:
+    matchLabels:
+      app: thetagang-notifications
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: thetagang-notifications
+    spec:
+      containers:
+        - name: ghcr.io/major/thetagang-notifications:latest
+          image: busybox
+          volumeMounts:
+            - mountPath: "/data"
+              name: csi-pvc
+          env:
+            - name: PYTHONBUFFERED
+              value: "1"
+            - name: TZ
+              value: "Etc/UTC"
+            - name: STORAGE_DIR
+              value: "/data"
+            # Discord webhook URLs.
+            - name: WEBHOOK_URL_EARNINGS
+              valueFrom:
+                secretKeyRef:
+                  name: thetagang-notifications-secret
+                  key: WEBHOOK_URL_EARNINGS
+            - name: WEBHOOK_URL_TRADES
+              valueFrom:
+                secretKeyRef:
+                  name: thetagang-notifications-secret
+                  key: WEBHOOK_URL_TRADES
+            - name: WEBHOOK_URL_TRENDS
+              valueFrom:
+                secretKeyRef:
+                  name: thetagang-notifications-secret
+                  key: WEBHOOK_URL_TRENDS
+            # Twitter secrets.
+            - name: TWITTER_CONSUMER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: thetagang-notifications-secret
+                  key: TWITTER_CONSUMER_KEY
+            - name: TWITTER_CONSUMER_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: thetagang-notifications-secret
+                  key: TWITTER_CONSUMER_SECRET
+            - name: TWITTER_ACCESS_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: thetagang-notifications-secret
+                  key: TWITTER_ACCESS_TOKEN
+            - name: TWITTER_ACCESS_TOKEN_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: thetagang-notifications-secret
+                  key: TWITTER_ACCESS_TOKEN_SECRET
+  volumeClaimTemplates:
+    - metadata:
+        name: thetagang-notifications
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+        storageClassName: do-block-storage
