@@ -14,8 +14,8 @@ spec:
         app: thetagang-notifications
     spec:
       containers:
-        - name: ghcr.io/major/thetagang-notifications:latest
-          image: busybox
+        - name: thetagang-notifications
+          image: ghcr.io/major/thetagang-notifications:latest
           volumeMounts:
             - mountPath: "/data"
               name: csi-pvc
