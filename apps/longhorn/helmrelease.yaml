@@ -15,6 +15,6 @@ spec:
   releaseName: longhorn
   targetNamespace: longhorn-system
   # https://github.com/longhorn/charts/blob/master/charts/longhorn/values.yaml
-  values:
-    persistence:
-      defaultClassReplicaCount: 2
+  # values:
+  #   persistence:
+  #     defaultClassReplicaCount: 2
