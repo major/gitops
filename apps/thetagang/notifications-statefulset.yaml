@@ -20,7 +20,7 @@ spec:
             - mountPath: "/data"
               name: csi-pvc
           env:
-            - name: PYTHONBUFFERED
+            - name: PYTHONUNBUFFERED
               value: "1"
             - name: TZ
               value: "Etc/UTC"
