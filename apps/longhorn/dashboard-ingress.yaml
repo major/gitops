@@ -9,7 +9,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.middlewares: longhorn-longhorn-basic-auth@kubernetescrd
 spec:
   rules:
-    - host: "longhorn.ctnr.cloud"
+    - host: longhorn.ctnr.cloud
       http:
         paths:
           - pathType: Prefix
