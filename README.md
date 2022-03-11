@@ -11,3 +11,4 @@ balancer, and a small amount of block storage.
 [DigitalOcean]: https://www.digitalocean.com/
 [flux]: https://github.com/fluxcd/flux2
 [SOPS]: https://github.com/mozilla/sops
+[age]: https://github.com/FiloSottile/age
