@@ -20,8 +20,8 @@ spec:
     communications:
       discord:
         enabled: true
-        channel: 909901631347367991
-        botid: 957998470076170320
+        channel: "909901631347367991"
+        botid: "957998470076170320"
         notiftype: short
     config:
       settings:
