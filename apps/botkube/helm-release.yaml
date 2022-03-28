@@ -29,6 +29,6 @@ spec:
       kubectl:
         enabled: false
   valuesFrom:
-    - kind: secret
+    - kind: Secret
       name: discord-secret
       valuesKey: values.yaml
