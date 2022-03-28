@@ -16,6 +16,18 @@ spec:
         name: botkube
         namespace: flux-system
   # https://www.botkube.io/installation/discord/
+  values:
+    communications:
+      discord:
+        enabled: true
+        channel: 909901631347367991
+        botid: 957998470076170320
+        notiftype: short
+    config:
+      settings:
+        clustername: do
+      kubectl:
+        enabled: false
   valuesFrom:
     - secretKeyRef:
         name: discord-secret
