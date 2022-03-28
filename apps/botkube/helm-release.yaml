@@ -29,8 +29,6 @@ spec:
       kubectl:
         enabled: false
   valuesFrom:
-    - secretKeyRef:
-        name: discord-secret
-        namespace: botkube
-        key: values.yaml
-        optional: false
+    - kind: secret
+      name: discord-secret
+      valuesKey: values.yaml
