@@ -1,2 +1,2 @@
 sopskey.txt
-apps/botkube/values.yaml
+apps/*/values.yaml
