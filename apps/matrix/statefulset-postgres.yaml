@@ -22,6 +22,11 @@ spec:
           env:
             - name: POSTGRES_DB
               value: synapse
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: POSTGRES_PASSWORD
   # volumeClaimTemplates:
   #   - metadata:
   #       name: matrix-postgres
