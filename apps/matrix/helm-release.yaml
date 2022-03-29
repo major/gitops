@@ -9,7 +9,7 @@ spec:
   timeout: 20m
   chart:
     spec:
-      chart: bitnami/postgresql
+      chart: postgresql
       version: "11.1.12"
       sourceRef:
         kind: HelmRepository
