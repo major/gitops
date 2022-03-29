@@ -13,7 +13,7 @@ spec:
       version: "11.1.12"
       sourceRef:
         kind: HelmRepository
-        name: postgresql
+        name: bitnami
         namespace: flux-system
   # https://github.com/bitnami/charts/blob/master/bitnami/postgresql/values.yaml
   values:
