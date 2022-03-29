@@ -19,7 +19,7 @@ spec:
   values:
     primary:
       persistence:
-        size: 15Gi
+        size: 10Gi
         storageClass: do-block-storage
   valuesFrom:
     - kind: Secret
