@@ -1,34 +1,19 @@
-# Source: https://github.com/timtorChen/k3s-garden/blob/6e0efd5b6f1e039f5fcc083a4e0e11cf49d005a6/cluster/source/gitrepo/kubegres.yaml
+# Source: https://github.com/rafaribe/home-ops
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
+  name: kubegres
   namespace: flux-system
-  name: kubegres-crd-source
 spec:
-  interval: 5m
-  url: https://github.com/reactive-tech/kubegres
+  interval: 9m0s
   ref:
-    # renovate repo=reactive-tech/kubegres
-    tag: v1.11
-  ignore: |
-    /*
-    # include the crd folder
-    !/config/crd
----
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: GitRepository
-metadata:
-  namespace: flux-system
-  name: kubegres-source
-spec:
-  interval: 5m
+    branch: main
+    # renovate: datasource=github-releases depName=reactive-tech/kubegres versioning=loose
+    tag: v1.15
   url: https://github.com/reactive-tech/kubegres
-  ref:
-    # renovate repo=reactive-tech/kubegres
-    tag: v1.11
   ignore: |
+    # exclude all
     /*
-    # include kustomization folder
-    !/config/manager
-    !/config/rbac
+    # include gitops dirs
+    !/config
