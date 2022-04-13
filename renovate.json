@@ -6,5 +6,10 @@
     "fileMatch": [
       "\\.yaml$"
     ]
+  },
+  "kubernetes": {
+    "fileMatch": [
+      "\\.yaml$"
+    ]
   }
 }
