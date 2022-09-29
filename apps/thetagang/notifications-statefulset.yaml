@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: thetagang-notifications
-          image: ghcr.io/major/thetagang-notifications:v1.1.5
+          image: ghcr.io/major/thetagang-notifications:v1.1.7
           volumeMounts:
             - mountPath: "/data"
               name: thetagang-notifications
