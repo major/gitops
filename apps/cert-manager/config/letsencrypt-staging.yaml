@@ -12,8 +12,4 @@ spec:
     solvers:
       - http01:
           ingress:
-            ingressTemplate:
-              metadata:
-                annotations:
-                  kubernetes.io/ingress.class: "traefik"
-                  traefik.ingress.kubernetes.io/router.priority: "100"
+            class: traefik
