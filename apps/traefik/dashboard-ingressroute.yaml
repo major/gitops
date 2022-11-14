@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`traefik.ctnr.cloud`)
+    - match: Host(`traefik.toots.cloud`)
       kind: Rule
       middlewares:
         - name: dashboard-ingress-auth
@@ -15,5 +15,3 @@ spec:
       services:
         - name: api@internal
           kind: TraefikService
-  tls:
-    secretName: ctnr-cloud-wildcard-prod

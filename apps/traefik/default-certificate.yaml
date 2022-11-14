@@ -5,4 +5,4 @@ metadata:
   namespace: traefik
 spec:
   defaultCertificate:
-    secretName: ctnr-cloud-wildcard-prod
+    secretName: ctnr-cloud-wildcard-staging

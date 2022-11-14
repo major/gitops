@@ -10,10 +10,10 @@ spec:
     privateKeySecretRef:
       name: letsencrypt-staging
     solvers:
-      - dns01:
-          cloudflare:
-            email: major@mhtx.net
-            apiTokenSecretRef:
-              name: cloudflare-api-token-secret
-              key: api-token
-        selector: {}
+      - http01:
+          ingress:
+            ingressTemplate:
+              metadata:
+                annotations:
+                  kubernetes.io/ingress.class: "traefik"
+                  traefik.ingress.kubernetes.io/router.priority: "100"
